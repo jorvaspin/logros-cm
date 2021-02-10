@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Event;
+namespace Civicamente\LogrosCm\Event;
 
-use Assada\Achievements\Model\AchievementProgress;
+use Civicamente\LogrosCm\Model\AchievementProgress;
 use Illuminate\Queue\SerializesModels;
 
 /**
  * Class Unlocked
  *
- * @package Assada\Achievements\Event
+ * @package Civicamente\LogrosCm\Event
  */
 class Unlocked
 {

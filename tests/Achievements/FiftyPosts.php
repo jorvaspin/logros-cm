@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Assada\Tests\Achievements;
 
-use Assada\Achievements\Achievement;
+use Civicamente\LogrosCm\Achievement;
 
 /**
  * Class FiftyPosts

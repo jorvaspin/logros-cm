@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace Civicamente\LogrosCm;
 
-use Assada\Achievements\Model\AchievementProgress;
+use Civicamente\LogrosCm\Model\AchievementProgress;
 use Carbon\Carbon;
 
 /**
  * Trait RoutesAchievements
  *
- * @package Assada\Achievements
+ * @package Civicamente\LogrosCm
  */
 trait RoutesAchievements
 {

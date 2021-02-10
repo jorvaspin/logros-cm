@@ -6,7 +6,7 @@ namespace Assada\Tests;
 use Illuminate\Foundation\Testing\TestCase;
 use Illuminate\Support\Facades\Artisan;
 use Assada\Tests\Model\User;
-use Assada\Achievements\AchievementsServiceProvider;
+use Civicamente\LogrosCm\AchievementsServiceProvider;
 
 /**
  * Class DBTestCase

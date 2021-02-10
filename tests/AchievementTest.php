@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Assada\Tests;
 
-use Assada\Achievements\Achievement;
-use Assada\Achievements\Model\AchievementDetails;
+use Civicamente\LogrosCm\Achievement;
+use Civicamente\LogrosCm\Model\AchievementDetails;
 use Assada\Tests\Model\User;
 use Assada\Tests\Achievements\FirstPost;
 use Assada\Tests\Achievements\TenPosts;

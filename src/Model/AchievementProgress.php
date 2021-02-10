@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Model;
+namespace Civicamente\LogrosCm\Model;
 
 use Carbon\Carbon;
 use Exception;
-use Assada\Achievements\Achievement;
+use Civicamente\LogrosCm\Achievement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -16,7 +16,7 @@ use Ramsey\Uuid\Uuid;
  * Model for the table that will store the data regarding achievement progress and unlocks.
  *
  * @category Model
- * @package  Assada\Achievements\Model
+ * @package  Civicamente\LogrosCm\Model
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
  * @link     https://github.com/assada/laravel-achievements
@@ -148,7 +148,7 @@ class AchievementProgress extends Model
     }
 
     /**
-     * Maps to Assada\Achievements\Achievement::$name
+     * Maps to Civicamente\LogrosCm\Achievement::$name
      *
      * @return string
      */
@@ -158,7 +158,7 @@ class AchievementProgress extends Model
     }
 
     /**
-     * Maps to Assada\Achievements\Achievement::$description
+     * Maps to Civicamente\LogrosCm\Achievement::$description
      *
      * @return string
      */

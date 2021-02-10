@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace Civicamente\LogrosCm;
 
 /**
  * Trait Achiever
  *
- * @package Assada\Achievements
+ * @package Civicamente\LogrosCm
  */
 trait Achiever
 {

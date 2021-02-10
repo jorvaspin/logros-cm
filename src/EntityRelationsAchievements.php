@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace Civicamente\LogrosCm;
 
-use Assada\Achievements\Model\AchievementDetails;
-use Assada\Achievements\Model\AchievementProgress;
+use Civicamente\LogrosCm\Model\AchievementDetails;
+use Civicamente\LogrosCm\Model\AchievementProgress;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
  * Trait EntityRelationsAchievements
  *
- * @package Assada\Achievements
+ * @package Civicamente\LogrosCm
  */
 trait EntityRelationsAchievements
 {

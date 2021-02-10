@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Console;
+namespace Civicamente\LogrosCm\Console;
 
-use Assada\Achievements\Achievement;
+use Civicamente\LogrosCm\Achievement;
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Support\Str;
@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 /**
  * Class LoadAchievements
  *
- * @package Assada\Achievements\Console
+ * @package Civicamente\LogrosCm\Console
  */
 class LoadAchievementsCommand extends Command
 {

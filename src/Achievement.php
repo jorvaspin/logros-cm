@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace Civicamente\LogrosCm;
 
-use Assada\Achievements\Event\Progress as ProgressEvent;
-use Assada\Achievements\Event\Unlocked as UnlockedEvent;
-use Assada\Achievements\Model\AchievementDetails;
-use Assada\Achievements\Model\AchievementProgress;
+use Civicamente\LogrosCm\Event\Progress as ProgressEvent;
+use Civicamente\LogrosCm\Event\Unlocked as UnlockedEvent;
+use Civicamente\LogrosCm\Model\AchievementDetails;
+use Civicamente\LogrosCm\Model\AchievementProgress;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Achievement
  *
- * @package Assada\Achievements
+ * @package Civicamente\LogrosCm
  */
 abstract class Achievement implements CanAchieve
 {

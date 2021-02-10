@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Console;
+namespace Civicamente\LogrosCm\Console;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -9,7 +9,7 @@ use Illuminate\Console\GeneratorCommand;
  * Creates an achievement class stub.
  *
  * @category Command
- * @package  Assada\Achievements\Command
+ * @package  Civicamente\LogrosCm\Command
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
  * @link     https://github.com/assada/laravel-achievements

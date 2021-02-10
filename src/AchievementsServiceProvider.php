@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace Civicamente\LogrosCm;
 
-use Assada\Achievements\Console\AchievementChainMakeCommand;
-use Assada\Achievements\Console\AchievementMakeCommand;
-use Assada\Achievements\Console\LoadAchievementsCommand;
+use Civicamente\LogrosCm\Console\AchievementChainMakeCommand;
+use Civicamente\LogrosCm\Console\AchievementMakeCommand;
+use Civicamente\LogrosCm\Console\LoadAchievementsCommand;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class AchievementsServiceProvider
  *
- * @package Assada\Achievements
+ * @package Civicamente\LogrosCm
  */
 class AchievementsServiceProvider extends ServiceProvider
 {

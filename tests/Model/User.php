@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Assada\Tests\Model;
 
-use Assada\Achievements\Achiever;
+use Civicamente\LogrosCm\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**

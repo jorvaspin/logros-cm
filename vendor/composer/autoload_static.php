@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInitbc46ccbdc73126f47f7ec1f2f2a1b385
 {
     public static $prefixLengthsPsr4 = array (
-        'c' => 
+        'C' => 
         array (
-            'civicamente\\logros-cm\\' => 22,
+            'Civicamente\\LogrosCm\\' => 21,
         ),
         'A' => 
         array (
@@ -18,9 +18,9 @@ class ComposerStaticInitbc46ccbdc73126f47f7ec1f2f2a1b385
     );
 
     public static $prefixDirsPsr4 = array (
-        'civicamente\\logros-cm\\' => 
+        'Civicamente\\LogrosCm\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/packages/civicamente/logros-cm/src',
+            0 => __DIR__ . '/../..' . '/packages/Civicamente/LogrosCm/src',
         ),
         'App\\' => 
         array (
