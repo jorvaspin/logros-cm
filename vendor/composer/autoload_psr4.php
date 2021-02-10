@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Civicamente\\LogrosCm\\' => array($baseDir . '/packages/Civicamente/LogrosCm/src'),
+    'civicamente\\logros-cm\\' => array($baseDir . '/src'),
     'App\\' => array($baseDir . '/app'),
 );

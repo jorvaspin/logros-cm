@@ -1,5 +1,5 @@
 {
-    "name": "Civicamente/LogrosCm",
+    "name": "civicamente/logros-cm",
     "description": "Modulo de logros, civicamente",
     "type": "project",
     "license": "MIT",
@@ -13,11 +13,11 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Civicamente\\LogrosCm\\": "packages/Civicamente/LogrosCm/src"
+            "civicamente\\logros-cm\\": "src"
         }
     },
     "require": {
-
+      "php": ">=7.4"
     },
     "repositories": [
         {
