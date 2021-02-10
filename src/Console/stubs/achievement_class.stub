@@ -1,0 +1,30 @@
+<?php
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Assada\Achievements\Achievement;
+
+/**
+ * Class Registered
+ *
+ * @package DummyNamespace
+ */
+class DummyClass extends Achievement
+{
+  public function index(): Response
+  {
+    //
+  }
+    /*
+     * The achievement name
+     */
+    public $name = 'DummyClass';
+
+    /*
+     * A small description for the achievement
+     */
+    public $description = ''
+}
