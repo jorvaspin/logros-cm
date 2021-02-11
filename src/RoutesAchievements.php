@@ -22,9 +22,9 @@ trait RoutesAchievements
      *
      * @return void
      */
-    public function addProgress(CanAchieve $instance, $points = 1): void
+    public function addProgress(CanAchieve $instance, $curso_id = null, $points = 1): void
     {
-        $instance->addProgressToAchiever($this, $points);
+        $instance->addProgressToAchiever($this, $curso_id, $points);
     }
     /**
      * Adds for date a specified amount of points to the achievement.
@@ -34,17 +34,17 @@ trait RoutesAchievements
      *
      * @return void
      */
-    public function addProgressDate(CanAchieve $instance, $points = 1, $date_start = null, $date_end = null): void
+    public function addProgressDate(CanAchieve $instance, $curso_id = null, $points = 1, $date_start = null, $date_end = null): void
     {
         // validamos si viene o no una fecha establecida
         if(!is_null($date_start) && !is_null($date_end)){
           // fecha de hoy
           $today = Carbon::today();
           if($today >= $date_start && $today <= $date_end){
-            $instance->addProgressToAchieverDate($this, $points, $date_start, $date_end);
+            $instance->addProgressToAchieverDate($this, $curso_id, $points, $date_start, $date_end);
           }
         }else{
-            $instance->addProgressToAchiever($this, $points);
+            $instance->addProgressToAchiever($this, $curso_id, $points);
         }
     }
 
@@ -107,7 +107,7 @@ trait RoutesAchievements
      *
      * @return void
      */
-    public function unlockForDate(Achievement $instance, $date_start = null, $date_end = null): void
+    public function unlockForDate(Achievement $instance, $curso_id = null,$date_start = null, $date_end = null): void
     {
       // fecha de hoy
       $today = Carbon::today();

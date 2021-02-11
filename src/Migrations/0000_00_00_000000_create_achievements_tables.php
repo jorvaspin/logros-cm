@@ -51,7 +51,7 @@ class CreateAchievementsTables extends Migration
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
                 $table->unsignedInteger('achievement_id');
-                $table->unsignedInteger('curso_id');
+                $table->unsignedInteger('curso_id')->nullable();
                 $table->morphs('achiever');
                 $table->integer('civipoints')->nullable();
                 $table->unsignedInteger('points')->default(0);

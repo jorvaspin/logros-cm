@@ -38,6 +38,11 @@ abstract class Achievement implements CanAchieve
      */
     public $points = 1;
 
+    /**
+     * The curso_id required to unlock this achievement.
+     */
+    public $curso_id = null;
+
     /*
      * Whether this is a secret achievement or not.
      */
@@ -98,20 +103,30 @@ abstract class Achievement implements CanAchieve
     }
 
     /**
-     * Gets the date start to  unlock the achievement.
+     * Gets the amount of points needed to unlock the achievement.
      *
      * @return int
      */
-    public function getDateStart(): int
+    public function getCursoID(): int
+    {
+        return $this->curso_id;
+    }
+
+    /**
+     * Gets the date start to  unlock the achievement.
+     *
+     * @return date
+     */
+    public function getDateStart(): date
     {
         return $this->date_start;
     }
     /**
      * Gets the date end to  unlock the achievement.
      *
-     * @return int
+     * @return date
      */
-    public function getDateEnd(): int
+    public function getDateEnd(): date
     {
         return $this->date_end;
     }
@@ -138,6 +153,7 @@ abstract class Achievement implements CanAchieve
             $model->name = $this->name;
             $model->description = $this->description;
             $model->points = $this->points;
+            $model->curso_id = $this->curso_id;
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
@@ -156,11 +172,12 @@ abstract class Achievement implements CanAchieve
      * @param mixed $achiever The entity that will add progress to this achievement
      * @param int $points The amount of points to be added to this achievement
      */
-    public function addProgressToAchiever($achiever, $points = 1): void
+    public function addProgressToAchiever($achiever, $curso_id = null, $points = 1): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
         if (!$progress->isUnlocked()) {
             $progress->points += $points;
+            $progress->curso_id = $curso_id;
             $progress->save();
         }
     }
@@ -171,11 +188,12 @@ abstract class Achievement implements CanAchieve
      * @param mixed $achiever The entity that will add progress to this achievement
      * @param int $points The amount of points to be added to this achievement
      */
-    public function addProgressToAchieverDate($achiever, $points = 1, $date_start = null, $date_end = null): void
+    public function addProgressToAchieverDate($achiever, $curso_id = null, $points = 1, $date_start = null, $date_end = null): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
         if (!$progress->isUnlocked()) {
             $progress->points += $points;
+            $progress->curso_id = $curso_id;
             $progress->save();
         }
     }
@@ -186,12 +204,13 @@ abstract class Achievement implements CanAchieve
      * @param mixed $achiever The entity that will add progress to this achievement
      * @param int $points The amount of points to be added to this achievement
      */
-    public function setProgressToAchiever($achiever, $points): void
+    public function setProgressToAchiever($achiever, $curso_id = null, $points): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
 
         if (!$progress->isUnlocked()) {
             $progress->points = $points;
+            $progress->curso_id = $curso_id;
             $progress->save();
         }
     }

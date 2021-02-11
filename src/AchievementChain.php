@@ -42,11 +42,11 @@ abstract class AchievementChain implements CanAchieve
      * @param $achiever
      * @param $points
      */
-    public function addProgressToAchiever($achiever, $points): void
+    public function addProgressToAchiever($achiever, $curso_id, $points): void
     {
         foreach ($this->chain() as $instance) {
             /** @var Achievement $instance */
-            $instance->addProgressToAchiever($achiever, $points);
+            $instance->addProgressToAchiever($achiever, $curso_id, $points);
         }
     }
 
@@ -56,11 +56,11 @@ abstract class AchievementChain implements CanAchieve
      * @param $date_start
      * @param $date_end
      */
-    public function addProgressToAchieverDate($achiever, $points, $date_start, $date_end): void
+    public function addProgressToAchieverDate($achiever, $curso_id, $points, $date_start, $date_end): void
     {
         foreach ($this->chain() as $instance) {
             /** @var Achievement $instance */
-            $instance->addProgressToAchieverDate($achiever, $points, $date_start, $date_end);
+            $instance->addProgressToAchieverDate($achiever, $curso_id, $points, $date_start, $date_end);
         }
     }
 
@@ -68,11 +68,11 @@ abstract class AchievementChain implements CanAchieve
      * @param $achiever
      * @param int $points
      */
-    public function setProgressToAchiever($achiever, $points): void
+    public function setProgressToAchiever($achiever, $curso_id, $points): void
     {
         foreach ($this->chain() as $instance) {
             /** @var Achievement $instance */
-            $instance->setProgressToAchiever($achiever, $points);
+            $instance->setProgressToAchiever($achiever, $curso_id, $points);
         }
     }
 }
