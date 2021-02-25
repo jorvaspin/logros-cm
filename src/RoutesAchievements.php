@@ -41,7 +41,7 @@ trait RoutesAchievements
           // fecha de hoy
           $today = Carbon::today();
           if($today >= $date_start && $today <= $date_end){
-            $instance->setProgressToAchiever($this, $curso_id, $points);
+            $instance->addProgressToAchiever($this, $curso_id, $points);
           }
         }else{
             $instance->addProgressToAchiever($this, $curso_id, $points);

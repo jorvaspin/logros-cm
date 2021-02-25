@@ -1,6 +1,6 @@
 {
     "name": "civicamente/logros-cm",
-    "description": "Módulo logros exclusivos civicamente.cl",
+    "description": "Módulo de logros exclusivo para civicamente.cl",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,7 @@
             "email": "nashowii@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "autoload": {
         "classmap": [
             "src/Migrations"
