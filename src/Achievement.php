@@ -39,6 +39,11 @@ abstract class Achievement implements CanAchieve
     public $points = 1;
 
     /**
+     * civipoints ganados por el logro
+     */
+    public $civipoints = 1;
+
+    /**
      * The curso_id required to unlock this achievement.
      */
     public $curso_id = null;
@@ -103,6 +108,16 @@ abstract class Achievement implements CanAchieve
     }
 
     /**
+     * Gets civipoints
+     *
+     * @return int
+     */
+    public function getCivipoints(): int
+    {
+        return $this->civipoints;
+    }
+
+    /**
      * Gets the amount of points needed to unlock the achievement.
      *
      * @return int
@@ -153,6 +168,7 @@ abstract class Achievement implements CanAchieve
             $model->name = $this->name;
             $model->description = $this->description;
             $model->points = $this->points;
+            $model->civipoints = $this->civipoints;
             $model->curso_id = $this->curso_id;
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
