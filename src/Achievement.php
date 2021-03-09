@@ -43,11 +43,6 @@ abstract class Achievement implements CanAchieve
      */
     public $civipoints = 1;
 
-    /**
-     * The curso_id required to unlock this achievement.
-     */
-    public $curso_id = null;
-
     /*
      * Whether this is a secret achievement or not.
      */
@@ -122,9 +117,9 @@ abstract class Achievement implements CanAchieve
      *
      * @return int
      */
-    public function getCursoID(): int
+    public function getImagen(): int
     {
-        return $this->curso_id;
+        return $this->imagen;
     }
 
     /**
@@ -169,7 +164,7 @@ abstract class Achievement implements CanAchieve
             $model->description = $this->description;
             $model->points = $this->points;
             $model->civipoints = $this->civipoints;
-            $model->curso_id = $this->curso_id;
+            $model->imagen = $this->imagen;
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
