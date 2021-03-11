@@ -39,6 +39,11 @@ abstract class Achievement implements CanAchieve
     public $points = 1;
 
     /**
+     * imagen del logro a desbloquear
+     */
+    public $image = null;
+
+    /**
      * civipoints ganados por el logro
      */
     public $civipoints = 1;
@@ -113,13 +118,13 @@ abstract class Achievement implements CanAchieve
     }
 
     /**
-     * Gets the amount of points needed to unlock the achievement.
+     * imagen del logro a desbloquear
      *
-     * @return int
+     * @return string
      */
-    public function getImagen(): int
+    public function getImage(): string
     {
-        return $this->imagen;
+        return $this->image;
     }
 
     /**
@@ -164,7 +169,7 @@ abstract class Achievement implements CanAchieve
             $model->description = $this->description;
             $model->points = $this->points;
             $model->civipoints = $this->civipoints;
-            $model->imagen = $this->imagen;
+            $model->imagen = $this->image;
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
