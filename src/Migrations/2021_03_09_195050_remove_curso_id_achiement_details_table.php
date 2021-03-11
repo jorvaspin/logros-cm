@@ -14,9 +14,12 @@ class RemoveCursoIdAchiementDetailsTable extends Migration
      */
     public function up()
     {
-      Schema::table('achievement_details', function($table) {
-          $table->dropColumn('curso_id');
-      });
+      if (Schema::hasColumn('curso_id')) {
+        Schema::table('achievement_details', function($table) {
+            $table->dropColumn('curso_id');
+        });
+      }
+
     }
 
     /**
