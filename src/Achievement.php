@@ -170,6 +170,7 @@ abstract class Achievement implements CanAchieve
             $model->points = $this->points;
             $model->civipoints = $this->civipoints;
             $model->image = $this->image;
+            
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
