@@ -15,7 +15,7 @@ class AddActiveTableAchievementDetails extends Migration
     public function up()
     {
       Schema::table('achievement_details', function (Blueprint $table) {
-          $table->boolean('active')->nullable()->default(1);
+          $table->boolean('active')->nullable()->default(1)->after('secret');
       });
     }
 

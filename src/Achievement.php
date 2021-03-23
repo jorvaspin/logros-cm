@@ -207,7 +207,7 @@ abstract class Achievement implements CanAchieve
     public function addProgressToAchiever($achiever, $curso_id = null, $points = 1): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
-        $logro = AchievementDetails::findOrFail($progress->achievement_id);
+        $logro = AchievementDetails::where('class_name', $this->getClassName())->first();
 
         if (!$progress->isUnlocked() && $logro->active == 1) {
             $progress->points += $points;
@@ -225,7 +225,7 @@ abstract class Achievement implements CanAchieve
     public function addProgressToAchieverDate($achiever, $curso_id = null, $points = 1, $date_start = null, $date_end = null): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
-        $logro = AchievementDetails::findOrFail($progress->achievement_id);
+        $logro = AchievementDetails::where('class_name', $this->getClassName())->first();
         if (!$progress->isUnlocked() && $logro->active == 1) {
             $progress->points += $points;
             $progress->curso_id = $curso_id;
