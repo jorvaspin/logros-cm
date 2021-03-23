@@ -54,6 +54,11 @@ abstract class Achievement implements CanAchieve
     public $secret = false;
 
     /*
+     * creamos la variable active, para saber si el logro esta activo o no.
+     */
+    public $active = false;
+
+    /*
      * The date start of "points"
      */
     public $date_start = null;
@@ -118,6 +123,16 @@ abstract class Achievement implements CanAchieve
     }
 
     /**
+     * Gets active
+     *
+     * @return int
+     */
+    public function getActive(): boolean
+    {
+        return $this->active;
+    }
+
+    /**
      * imagen del logro a desbloquear
      *
      * @return string
@@ -170,10 +185,10 @@ abstract class Achievement implements CanAchieve
             $model->points = $this->points;
             $model->civipoints = $this->civipoints;
             $model->image = $this->image;
-            
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
+            $model->active = $this->active;
 
             // Syncs
             $model->save();
@@ -192,7 +207,9 @@ abstract class Achievement implements CanAchieve
     public function addProgressToAchiever($achiever, $curso_id = null, $points = 1): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
-        if (!$progress->isUnlocked()) {
+        $logro = AchievementDetails::findOrFail($progress->achievement_id);
+
+        if (!$progress->isUnlocked() && $logro->active == 1) {
             $progress->points += $points;
             $progress->curso_id = $curso_id;
             $progress->save();
@@ -208,7 +225,8 @@ abstract class Achievement implements CanAchieve
     public function addProgressToAchieverDate($achiever, $curso_id = null, $points = 1, $date_start = null, $date_end = null): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
-        if (!$progress->isUnlocked()) {
+        $logro = AchievementDetails::findOrFail($progress->achievement_id);
+        if (!$progress->isUnlocked() && $logro->active == 1) {
             $progress->points += $points;
             $progress->curso_id = $curso_id;
             $progress->save();
