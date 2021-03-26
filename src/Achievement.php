@@ -56,7 +56,7 @@ abstract class Achievement implements CanAchieve
     /*
      * creamos la variable active, para saber si el logro esta activo o no.
      */
-    public $active = false;
+    // public $active = false;
 
     /*
      * The date start of "points"
@@ -127,10 +127,10 @@ abstract class Achievement implements CanAchieve
      *
      * @return int
      */
-    public function getActive(): boolean
-    {
-        return $this->active;
-    }
+    // public function getActive(): boolean
+    // {
+    //     return $this->active;
+    // }
 
     /**
      * imagen del logro a desbloquear
@@ -188,7 +188,7 @@ abstract class Achievement implements CanAchieve
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
-            $model->active = $this->active;
+            // $model->active = $this->active;
 
             // Syncs
             $model->save();
