@@ -188,7 +188,6 @@ abstract class Achievement implements CanAchieve
             $model->date_start = $this->date_start;
             $model->date_end = $this->date_end;
             $model->secret = $this->secret;
-            $model->active = $this->active;
 
             // Syncs
             $model->save();
@@ -207,7 +206,7 @@ abstract class Achievement implements CanAchieve
     public function addProgressToAchiever($achiever, $curso_id = null, $points = 1): void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
-        $logro = AchievementDetails::where('class_name', $this->getClassName())->first();
+        $addProgress = AchievementDetails::where('class_name', $this->getClassName())->first();
 
         if (!$progress->isUnlocked() && $logro->active == 1) {
             $progress->points += $points;

@@ -9,7 +9,7 @@
             "email": "nashowii@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "autoload": {
         "classmap": [
             "src/Migrations"
